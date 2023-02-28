@@ -8,39 +8,48 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css
     ">
 </head>
-<body>
-    <div class="jumbotron">
-        <h1>Game News Aggregator</h1>
-        <a href="/">Refresh News</a>
+<body class="bg-light-dark">
+    <div class="jumbotron bg-info py-3 d-flex justify-content-center">
+        <h1>Videogames News Aggregator</h1>
+        <!-- <a class="btn " href="/">Refresh News</a> -->
     </div>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
+
             <div class="col-6">
-                    <h3 class="text-centre"> News from Levelup</h3>
+                <h3 class="text-center mb-4"> News from Levelup.com</h3>
                     <!-- {{lu_news}} -->
-                    {% for n in lu_news %}
-                        <h5>
-                            {% for h in lu_as %}  
+                <div class="card text-bg-light">
+                {% for n in lu_news %}
+                    <div class="m-2 py-2">
+                        <h5 class="">
+                            <!-- {% for h in lu_as %}  
                             <a href="{{h}}"></a>  
-                            {% endfor %}
+                            {% endfor %} -->
                             {{n}} 
                         </h5>
-                    <hr>
+                    </div>
+                <hr>
                     {% endfor %}
-                    <br>
+                </div>
+                     
             </div>
+
             <div class="col-6">
-                    <h3 class="text-centre">News from Eurogamer</h3>
-                    {% for n in eu_news %}
-                        <h5>
-                            {% for h in eu_as %}  
-                            <a href="{{h}}"></a>  
-                            {% endfor %}
-                            {{n}} 
-                        </h5>
-                    <hr>
-                    {% endfor %}
-                    <br>
+                <h3 class="text-center mb-4">News from Eurogamer.es</h3>
+                    <div class="card text-bg-light">
+                        {% for n in eu_news %}
+                            <div class="m-2 py-2">
+                                <h5>
+                                    <!-- {% for h in eu_as %}  
+                                    <a href="{{h}}"></a>  
+                                    {% endfor %} -->
+                                    {{n}} 
+                                </h5>
+                            </div>
+                        <hr>
+                        {% endfor %}
+                    </div>
             </div>
         </div>
     </div>
