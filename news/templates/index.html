@@ -18,19 +18,26 @@
             <div class="col-6">
                     <h3 class="text-centre"> News from Levelup</h3>
                     <!-- {{lu_news}} -->
-                    {% for h in lu_as %}
                     {% for n in lu_news %}
-                    
-                    <h5><a href="{{h}}">{{h}}</a></h5>
+                        <h5>
+                            {% for h in lu_as %}  
+                            <a href="{{h}}"></a>  
+                            {% endfor %}
+                            {{n}} 
+                        </h5>
                     <hr>
-                    {% endfor %}
                     {% endfor %}
                     <br>
             </div>
             <div class="col-6">
                     <h3 class="text-centre">News from Eurogamer</h3>
-                    {% for m in eu_news %}
-                    <h5> - {{m}} </h5>
+                    {% for n in eu_news %}
+                        <h5>
+                            {% for h in eu_as %}  
+                            <a href="{{h}}"></a>  
+                            {% endfor %}
+                            {{n}} 
+                        </h5>
                     <hr>
                     {% endfor %}
                     <br>
