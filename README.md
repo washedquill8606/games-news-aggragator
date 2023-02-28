@@ -2,7 +2,7 @@
 
 Videogames news aggregator from sites that I frequently check.
 
-#### Work in progress
+### Work in progress
 
 - Web design
 - Link references
